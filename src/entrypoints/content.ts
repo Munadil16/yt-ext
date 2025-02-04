@@ -1,6 +1,18 @@
+type Message = {
+    type: string;
+    speed: number;
+};
+
 export default defineContentScript({
-    matches: ["*://*.google.com/*"],
+    matches: ["*://*.youtube.com/*"],
     main() {
-        console.log("Hello content.");
+        browser.runtime.onMessage.addListener((message: Message) => {
+            if (message.type === "UPDATE_PLAYBACK_SPEED") {
+                const videoElt = document.querySelector("video");
+                if (videoElt) {
+                    videoElt.playbackRate = message.speed;
+                }
+            }
+        });
     },
 });

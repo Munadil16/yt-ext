@@ -5,4 +5,8 @@ export default defineConfig({
     outDir: "dist",
     extensionApi: "chrome",
     modules: ["@wxt-dev/module-react"],
+    manifest: {
+        host_permissions: ["*://*.youtube.com/*"],
+        permissions: ["tabs", "activeTab"],
+    },
 });
