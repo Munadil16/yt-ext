@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.915);
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+h1 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    padding: 0rem 1.2rem;
+    color: rgb(213, 130, 255);
+}
+
+p {
+    font-weight: 400;
+    font-size: medium;
+    white-space: nowrap;
+    padding: 0.7rem 1.2rem;
+}
+
+#playback-speed {
+    padding: 0;
+    font-weight: 700;
+    color: rgb(213, 130, 255);
+}
