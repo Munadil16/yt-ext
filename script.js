@@ -1,7 +1,9 @@
 const speed = document.querySelector("input[type='range']");
 const playbackSpeed = document.querySelector("#playback-speed");
 
-chrome.storage.local.set({ speed: 1 });
+document.addEventListener("DOMContentLoaded", () => {
+    chrome.storage.local.set({ speed: 1 });
+});
 
 chrome.storage.local.get(["speed"], (result) => {
     speed.value = result.speed;
